@@ -103,7 +103,7 @@ airootfs/root/packages
 Пример:
 
 ~~~
-AtomicOS_Atom-2024.01.25.iso
+AtomOS_Atom-2024.01.25.iso
 ~~~
 
 **AtomicOS_НАЗВАНИЕ-РЕЛИЗА-YYYY.MM.DD.iso**
