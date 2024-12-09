@@ -1,161 +1,140 @@
-# EndeavourOS-ISO
+# AtomOS-ISO
 
 [![Maintenance](https://img.shields.io/maintenance/yes/2024.svg)]()
 
-**main** branch is development latest (unstable)
+**main** ветка является последней разработкой (нестабильной)
 
-### Developers:
-- [joekamprad](https://github.com/killajoe)
-- [manuel](https://github.com/manuel-192)
-- [fernandomaroto](https://github.com/Portergos) (initial developer)
+### Разработчики:
+- [единственный разработчик](https://github.com/dmaliog)
 
-### Contributors:
-- [keybreak](https://github.com/keybreak)
-
-..and our beloved community
-
-This ISO is based on hugely modified Arch-ISO to provide Installation Environment for EndeavourOS.  
-More info at [EndeavourOS-GitHub-Development](https://endeavouros-team.github.io/EndeavourOS-Development/)
+Этот ISO основан на сильно модифицированном Arch-ISO, который обеспечивает среду установки для AtomOS. 
 
 
-## Resources:
+## Ресурсы:
 
 <img src="https://raw.githubusercontent.com/endeavouros-team/screenshots/master/KDE-LiveSession.png" alt="Installer LiveSession" width="600"/>
 
-- https://endeavouros.com
-- [Getting help at the forum](https://forum.endeavouros.com)
-- [Bug report](https://forum.endeavouros.com/c/Arch-based-related-questions/bug-reports)
-- [Telegram help-chat](https://t.me/Endeavouros)
-- [Twitter news](https://twitter.com/OsEndeavour)
+- [сообщество](https://vk.com/linux2)
 
-Our journey wouldn't be made possible without the generosity of our [Open Collective community](https://opencollective.com/endeavouros)!
+### Источник разработки
 
-
-### Development source
-
-- [EndeavourOS-ISO source](https://github.com/endeavouros-team/EndeavourOS-ISO) (Live environment with KDE-Desktop)
-- [Calamares {EndeavourOS fork}](https://github.com/endeavouros-team/calamares) (installer framework)
+- [EndeavourOS-ISO source](https://github.com/endeavouros-team/EndeavourOS-ISO) (Среда с KDE-Desktop)
+- [Calamares {EndeavourOS fork}](https://github.com/endeavouros-team/calamares) (фреймворк установщика)
 
 
-### Base source
+### Базовый источник
 
 - [Arch-ISO](https://gitlab.archlinux.org/archlinux/archiso)
 - [Calamares](https://github.com/calamares/calamares)
 
 
 
-# Boot options
+# Параметры загрузки
 
-Systemd-boot for UEFI systems:  
+Systemd-загрузка для систем UEFI:
 <img src="https://raw.githubusercontent.com/endeavouros-team/screenshots/master/Apollo/apollo-systemdboot.png" alt="drawing" width="600"/>
 
-Bios-boot (syslinux) for legacy systems:  
+Bios-загрузка (syslinux) для устаревших систем:
 <img src="https://raw.githubusercontent.com/endeavouros-team/screenshots/master/Apollo/apollo-syslinux.png" alt="drawing" width="600"/>
 
 
 
-# How to build ISO
+# Как создать ISO
 
-You need to use an installed EndeavourOS system or any archbased system with EndeavourOS [repository](https://github.com/endeavouros-team/mirrors) enabled.
+Вам необходимо использовать установленную систему AtomicOS или любую систему на базе архива с включенным [репозиторием] AtomicOS (https://github.com/endeavouros-team/mirrors).
+Поскольку установочные пакеты и необходимые зависимости будут установлены из репозитория AtomicOS.
 
-As the installer packages and needed dependencies will get installed from EndeavourOS repository.
-
-General information: 
-
+Основная информация:
 https://endeavouros-team.github.io/EndeavourOS-Development/
 
-Read the changelog before starting to learn about latest changes:
-
+Прежде чем приступить к ознакомлению с последними изменениями, ознакомьтесь с списком изменений:
 https://github.com/endeavouros-team/EndeavourOS-ISO/blob/main/CHANGELOG.md
 
-### Install build dependencies
+### Установить зависимости сборки
 
 ```
 sudo pacman -S archiso git squashfs-tools --needed
 ```
-It is recommended to reboot after these changes.
+После этих изменений рекомендуется перезагрузиться.
 
-### Build
+### Сборка
 
-##### 1. Prepare
+##### 1. Подготовка
 
-If you want the last release state to rebuild the ISO, you need to use a specifically tagged tarball from here:
+Если вы хотите, чтобы ISO-файл был восстановлен в состоянии последнего выпуска, вам нужно использовать специально помеченный архивный файл отсюда:
 https://github.com/endeavouros-team/EndeavourOS-ISO/tags
 
-If not, it will default to using the latest "unstable" development state.
+Если нет, то по умолчанию будет использоваться последнее "нестабильное" состояние разработки.
 
-example using latest **stable** release (23.11.1.2 Galileo KDE Release) 
+пример использования последней ** стабильной** версии (23.11.1.2 Galileo KDE Release) 
 
-**Warning:** do **not** use the zip tarball, in case this causes issues with symlinks.
-
+** Внимание:** не используйте архиватор zip, если это вызовет проблемы с символическими ссылками.
 ```
 wget https://github.com/endeavouros-team/EndeavourOS-ISO/archive/refs/tags/23.11.1.2.tar.gz
 tar -xvf 23.11.1.2.tar.gz
 cd "EndeavourOS-ISO-23.11.1.2"
 ./prepare.sh
 ```
-### Or use latest **unstable** development branch using by cloning this repo using git:
+### Или используйте последнюю ** нестабильную ** ветку разработки, используя клонирование этого репозитория с помощью git:
 
 ```
 git clone https://github.com/endeavouros-team/EndeavourOS-ISO.git
 cd EndeavourOS-ISO
 ./prepare.sh
 ```
-### In case you want to build pre Galileo Releases:
+### На случай, если вы захотите создавать версии, предшествующие Galileo:
 
-If  that you can use older tags like:
+Если это так, вы можете использовать более старые теги, такие как:
 ```
 wget https://github.com/endeavouros-team/EndeavourOS-ISO/archive/refs/tags/22.12.2.tar.gz
 tar -xvf 22.12.2.tar.gz
 cd "EndeavourOS-ISO-22.12.2"
 ./prepare.sh
 ```
-But caused by the change to KDE these iso will use XFCE4 LiveSession and you will need to build calamares manually to get old style theming that is setup for the XFCE4 LiveSession:
+Но из-за изменений в KDE эти iso-файлы будут использовать XFCE4 LiveSession, и вам нужно будет собрать calamares вручную, чтобы получить темы в старом стиле, настроенные для XFCE4 LiveSession:
 
-using this PKGBUILD: 
+используя этот PKGBUILD:
 https://raw.githubusercontent.com/endeavouros-team/PKGBUILDS/18e3f580abb68486091492168956619bb0f32abe/calamares/PKGBUILD
 
-And put the resulting package into ISO structure to get installed with the ISO build procedure:
+И поместите полученный пакет в структуру ISO, чтобы он был установлен с помощью процедуры сборки ISO:
 
 `airootfs/root/packages/`
 
-To get this working you need to remove `calamares` from `packages.x86_64` before starting ISO build.
+Чтобы это заработало, вам нужно удалить "calamares" из "packages.x86_64` перед запуском сборки ISO.
 
-##### 2. Build
+##### 2. Сборка
 
 ~~~
 sudo ./mkarchiso -v "."
 ~~~
 
-**or with log:**
+**или с помощью журнала:**
 
 ~~~
 sudo ./mkarchiso -v "." 2>&1 | tee "eosiso_$(date -u +'%Y.%m.%d-%H:%M').log"
 ~~~
 
-##### 3. The .iso file appears in the `out` directory...
+##### 3. ISO-файл появится в каталоге "out"...
 
 
-## Advanced
+## Остальное
 
-To install locally built packages on ISO, put the packages inside the following directory:
+Чтобы установить локально созданные пакеты на ISO, поместите их в следующий каталог:
 
 ~~~
 airootfs/root/packages
 ~~~
 
-Packages will be installed and the directory will be cleaned up after that.
+Пакеты будут установлены, и после этого каталог будет очищен.
 
 
-## General  ISO naming:
+## Общее обозначение ISO:
 
-Example:
+Пример:
 
 ~~~
-EndeavourOS_Galileo-Neo-2024.01.25.iso
+AtomicOS_Atom-2024.01.25.iso
 ~~~
 
-**EndeavourOS_RELEASENAMEREBUILD-YYYY.MM.DD.iso**
-
-* YYYY.MM.DD: of the release 
-* REBUILD: (empty), -Neo, -Nova 
+**AtomicOS_НАЗВАНИЕ-РЕЛИЗА-YYYY.MM.DD.iso**
+* ГГГГ.ММ.ДД: дата выпуска
