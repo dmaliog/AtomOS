@@ -72,33 +72,6 @@ tar -xvf 23.11.1.2.tar.gz
 cd "EndeavourOS-ISO-23.11.1.2"
 ./prepare.sh
 ```
-### Или используйте последнюю ** нестабильную ** ветку разработки, используя клонирование этого репозитория с помощью git:
-
-```
-git clone https://github.com/endeavouros-team/EndeavourOS-ISO.git
-cd EndeavourOS-ISO
-./prepare.sh
-```
-### На случай, если вы захотите создавать версии, предшествующие Galileo:
-
-Если это так, вы можете использовать более старые теги, такие как:
-```
-wget https://github.com/endeavouros-team/EndeavourOS-ISO/archive/refs/tags/22.12.2.tar.gz
-tar -xvf 22.12.2.tar.gz
-cd "EndeavourOS-ISO-22.12.2"
-./prepare.sh
-```
-Но из-за изменений в KDE эти iso-файлы будут использовать XFCE4 LiveSession, и вам нужно будет собрать calamares вручную, чтобы получить темы в старом стиле, настроенные для XFCE4 LiveSession:
-
-используя этот PKGBUILD:
-https://raw.githubusercontent.com/endeavouros-team/PKGBUILDS/18e3f580abb68486091492168956619bb0f32abe/calamares/PKGBUILD
-
-И поместите полученный пакет в структуру ISO, чтобы он был установлен с помощью процедуры сборки ISO:
-
-`airootfs/root/packages/`
-
-Чтобы это заработало, вам нужно удалить "calamares" из "packages.x86_64` перед запуском сборки ISO.
-
 ##### 2. Сборка
 
 ~~~
