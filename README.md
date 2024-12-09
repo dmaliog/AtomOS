@@ -32,9 +32,11 @@
 # Параметры загрузки
 
 Systemd-загрузка для систем UEFI:
+
 <img src="https://raw.githubusercontent.com/endeavouros-team/screenshots/master/Apollo/apollo-systemdboot.png" alt="drawing" width="600"/>
 
 Bios-загрузка (syslinux) для устаревших систем:
+
 <img src="https://raw.githubusercontent.com/endeavouros-team/screenshots/master/Apollo/apollo-syslinux.png" alt="drawing" width="600"/>
 
 
