@@ -1,0 +1,14 @@
+[AC][Display]
+TurnOffDisplayWhenIdle=false
+
+[AC][SuspendAndShutdown]
+LidAction=1
+PowerButtonAction=0
+
+[Battery][SuspendAndShutdown]
+AutoSuspendAction=1
+LidAction=1
+
+[LowBattery][SuspendAndShutdown]
+AutoSuspendAction=1
+LidAction=1

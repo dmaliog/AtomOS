@@ -43,5 +43,5 @@ get_pkg() {
 get_pkg "yandex-browser"
 
 # Собираем liveuser skel
-cd "$ROOT_DIR/endeavouros-skel-liveuser"
+cd "$ROOT_DIR/atomicos-skel-liveuser"
 makepkg -f

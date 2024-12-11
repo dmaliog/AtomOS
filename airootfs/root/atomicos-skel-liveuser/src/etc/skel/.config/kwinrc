@@ -1,0 +1,16 @@
+[Desktops]
+Id_1=e30b2100-7f0c-45a8-801b-43eaaad52fb7
+Number=1
+Rows=1
+
+[Tiling]
+padding=4
+
+[Tiling][75ed573d-6eee-5e00-a7c4-c7589c8df991]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[org.kde.kdecoration2]
+BorderSize=None
+BorderSizeAuto=false
+ButtonsOnLeft=S
+ButtonsOnRight=IAX

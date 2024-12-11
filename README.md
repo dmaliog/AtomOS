@@ -1,13 +1,8 @@
-# AtomicOS-ISO
-
-Приемущства:
-- Русский язык по умолчанию
-- Репозитории стран BRICS
-- Более современный интерфейс
+# AtomOS-ISO
 
 [![Maintenance](https://img.shields.io/maintenance/yes/2024.svg)]()
 
-Этот ISO основан на сильно модифицированном EndeavourOS-ISO, который обеспечивает среду установки для AtomicOS. 
+Этот ISO основан на сильно модифицированном EndeavourOS-ISO, который обеспечивает среду установки для AtomOS. 
 
 
 ## Ресурсы:
@@ -111,7 +106,7 @@ airootfs/root/packages
 Пример:
 
 ~~~
-AtomicOS_Atom-2024.01.25.iso
+AtomOS_Atom-2024.01.25.iso
 ~~~
 
 **AtomicOS_НАЗВАНИЕ-РЕЛИЗА-YYYY.MM.DD.iso**
