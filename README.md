@@ -1,5 +1,10 @@
 # AtomicOS-ISO
 
+Приемущства:
+- Русский язык по умолчанию
+- Репозитории стран BRICS
+- Более современный интерфейс
+
 [![Maintenance](https://img.shields.io/maintenance/yes/2024.svg)]()
 
 Этот ISO основан на сильно модифицированном EndeavourOS-ISO, который обеспечивает среду установки для AtomicOS. 
