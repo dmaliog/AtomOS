@@ -15,6 +15,9 @@
 
 - [EndeavourOS-ISO source](https://github.com/endeavouros-team/EndeavourOS-ISO) (Среда с KDE-Desktop)
 - [Calamares {EndeavourOS fork}](https://github.com/endeavouros-team/calamares) (фреймворк установщика)
+- Темы Goldy
+- Курсоры Bibata-Modern-Ice
+- Иконки Papirus
 
 
 ### Базовый источник
