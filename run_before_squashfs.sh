@@ -25,10 +25,14 @@ echo "##############################"
 
 cd "/root"
 
-# Init & Populate keys
-pacman-key --init
-pacman-key --populate archlinux endeavouros
-pacman -Syy
+# Инициализация и заполнение ключей
+sudo pacman-key --init
+sudo pacman-key --populate archlinux endeavouros chaotic
+pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
+pacman-key --lsign-key 3056513887B78AEB
+
+# Синхронизация репозиториев
+sudo pacman -Syy
 
 # backup bash configs from skel to replace after liveuser creation
 mkdir -p "/root/filebackups/"
@@ -77,8 +81,8 @@ rm -rf "/root/packages/"
 systemctl set-default multi-user.target
 
 # Set wallpaper for live-session and original for installed system
-mv "endeavouros-wallpaper.png" "/etc/calamares/files/endeavouros-wallpaper.png"
-mv "/root/livewall.png" "/usr/share/endeavouros/backgrounds/endeavouros-wallpaper.png"
+mv "livewall.png" "/etc/calamares/files/livewall.png"
+mv "/root/livewall.png" "/usr/share/endeavouros/backgrounds/livewall.png"
 chmod 644 "/usr/share/endeavouros/backgrounds/"*".png"
 
 # CUSTOM FIXES

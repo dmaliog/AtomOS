@@ -5,8 +5,10 @@ iptables-nft
 base
 base-devel
 archlinux-keyring
+
 endeavouros-mirrorlist
 endeavouros-keyring
+
 cryptsetup
 device-mapper
 diffutils
@@ -276,9 +278,13 @@ eos-quickstart
 eos-rankmirrors
 nvidia-inst
 rate-mirrors
-reflector-simple
+#reflector-simple
 welcome
 yay
+
+## Мои дороботки
+lightly-kf6-git
+fish
 
 ## Calamares EndeavourOS
 calamares
