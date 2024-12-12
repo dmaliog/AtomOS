@@ -35,6 +35,13 @@ cp -af "/etc/skel/"{".bashrc",".bash_profile"} "/root/filebackups/"
 # Установка skel для liveuser
 pacman -U --noconfirm --overwrite "/etc/skel/.bash_profile","/etc/skel/.bashrc" -- "/root/atomicos-skel-liveuser/"*".pkg.tar.zst"
 
+echo "##############################"
+echo "# проверка файлов skel #"
+
+ls /etc/skel/
+
+echo "##############################"
+
 # Подготовка настроек для живой сессии
 locale-gen
 ln -sf "/usr/share/zoneinfo/UTC" "/etc/localtime"
