@@ -89,7 +89,7 @@ rm -rf "/var/cache/pacman/pkg/"
 
 # Создание файла версий пакетов
 pacman -Qs | grep "/calamares " | cut -c7- > iso_package_versions
-pacman -Qs | grep "/firefox " | cut -c7- >> iso_package_versions
+pacman -Qs | grep "/yandex-browser " | cut -c7- >> iso_package_versions
 pacman -Qs | grep "/linux " | cut -c7- >> iso_package_versions
 pacman -Qs | grep "/mesa " | cut -c7- >> iso_package_versions
 pacman -Qs | grep "/xorg-server " | cut -c7- >> iso_package_versions
