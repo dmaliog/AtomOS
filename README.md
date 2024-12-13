@@ -65,18 +65,8 @@ sudo pacman -S archiso git squashfs-tools --needed
 
 ##### 1. Подготовка
 
-Если вы хотите, чтобы ISO-файл был восстановлен в состоянии последнего выпуска, вам нужно использовать специально помеченный архивный файл отсюда:
-https://github.com/endeavouros-team/EndeavourOS-ISO/tags
-
-Если нет, то по умолчанию будет использоваться последнее "нестабильное" состояние разработки.
-
-пример использования последней ** стабильной** версии (23.11.1.2 Galileo KDE Release) 
-
 ** Внимание:** не используйте архиватор zip, если это вызовет проблемы с символическими ссылками.
 ```
-wget https://github.com/endeavouros-team/EndeavourOS-ISO/archive/refs/tags/23.11.1.2.tar.gz
-tar -xvf 23.11.1.2.tar.gz
-cd "EndeavourOS-ISO-23.11.1.2"
 ./prepare.sh
 ```
 ##### 2. Сборка
