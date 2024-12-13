@@ -7,10 +7,10 @@ trap 'echo "Ошибка на строке $LINENO"; exit 1' ERR
 debug="n"
 [[ $debug == "y" ]] && set -x
 
-iso_name="AtomicOS_ISO"
+iso_name="EndeavourOS_Endeavour"
 iso_label="AOS_$(date +%Y%m)"
-iso_publisher="AtomicOS <http://vk.com/linux2>"
-iso_application="AtomicOS Live/Rescue CD"
+iso_publisher="EndeavourOS <https://endeavouros.com>"
+iso_application="EndeavourOS Live/Rescue CD"
 iso_version="$(date --date="@${SOURCE_DATE_EPOCH:-$(date +%s)}" +%Y.%m.%d)"
 install_dir="arch"
 buildmodes=('iso')
@@ -45,13 +45,8 @@ if [[ $EUID -ne 0 ]]; then
   exit 1
 fi
 
-log_file="aiso_$(date -u +'%Y.%m.%d-%H:%M').log"
-echo "Лог будет записан в файл: $log_file"
 echo "Начинаю сборку ISO-образа: $iso_name"
 echo "Рабочая директория: $work_dir"
 echo "Выходная директория: $out_dir"
 
-# Команда сборки с логированием
-sudo ./mkarchiso -v "." 2>&1 | tee "$log_file"
-
-echo "Сборка завершена. Лог сохранён в $log_file"
+# Добавить команды для выполнения сборки (например, вызов mkarchiso)
