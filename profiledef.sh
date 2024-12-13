@@ -7,10 +7,10 @@ trap 'echo "Ошибка на строке $LINENO"; exit 1' ERR
 debug="n"
 [[ $debug == "y" ]] && set -x
 
-iso_name="EndeavourOS_Endeavour"
+iso_name="AtomicOS_ISO"
 iso_label="AOS_$(date +%Y%m)"
-iso_publisher="EndeavourOS <https://endeavouros.com>"
-iso_application="EndeavourOS Live/Rescue CD"
+iso_publisher="AtomicOS <https://vk.com/linux2>"
+iso_application="AtomicOS Live/Rescue CD"
 iso_version="$(date --date="@${SOURCE_DATE_EPOCH:-$(date +%s)}" +%Y.%m.%d)"
 install_dir="arch"
 buildmodes=('iso')
