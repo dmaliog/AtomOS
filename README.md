@@ -78,7 +78,7 @@ sudo ./mkarchiso -v "."
 **или с помощью журнала:**
 
 ~~~
-sudo ./mkarchiso -v "." 2>&1 | tee "eosiso_$(date -u +'%Y.%m.%d-%H:%M').log"
+sudo ./mkarchiso -v "." 2>&1 | tee "aiso_$(date -u +'%Y.%m.%d-%H:%M').log"
 ~~~
 
 ##### 3. ISO-файл появится в каталоге "out"...
