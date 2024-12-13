@@ -4,4 +4,4 @@ rm airootfs/root/packages/*.pkg.tar.zst
 rm airootfs/root/packages/*.pkg.tar.zst.sig
 rm -rf airootfs/root/atomicos-skel-liveuser/pkg
 rm airootfs/root/atomicos-skel-liveuser/*.pkg.tar.zst
-rm eosiso*.log
+rm aiso*.log
