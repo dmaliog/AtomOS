@@ -8,7 +8,7 @@ debug="n"
 [[ $debug == "y" ]] && set -x
 
 iso_name="AtomicOS_ISO"
-iso_label="EOS_$(date +%Y%m)"
+iso_label="AOS_$(date +%Y%m)"
 iso_publisher="AtomicOS <http://vk.com/linux2>"
 iso_application="AtomicOS Live/Rescue CD"
 iso_version="$(date --date="@${SOURCE_DATE_EPOCH:-$(date +%s)}" +%Y.%m.%d)"
